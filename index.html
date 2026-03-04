@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Trabalho de UML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e6e6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 5px solid blue;
+        }
+
+        .conteudo {
+            background-color: white;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #999;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        h2 {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        h3 {
+            color: darkblue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+        }
+
+        th {
+            background-color: #ccc;
+            padding: 10px;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        .dica {
+            background-color: yellow;
+            padding: 10px;
+            border: 2px dashed black;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Descomplicando a UML</h1>
+    <p>Unified Modeling Language: A planta baixa do software</p>
+</header>
+
+<div class="conteudo">
+    
+    <section>
+        <h2>O que é UML?</h2>
+        <p>A <strong>UML (Linguagem de Modelagem Unificada)</strong> é uma linguagem padrão utilizada para especificar, visualizar, construir e documentar os artefatos de sistemas de software.</p>
+        
+        <h3>Por que usar UML?</h3>
+        <ul>
+            <li><strong>Comunicação:</strong> Facilita o diálogo entre equipes.</li>
+            <li><strong>Padronização:</strong> Todo mundo entende os desenhos.</li>
+            <li><strong>Planejamento:</strong> Evita erros antes de programar.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Principais Diagramas</h2>
+        <p>A UML é dividida em dois tipos:</p>
+
+        <h3>1. Diagramas Estruturais</h3>
+        <p>Mostram como o sistema é montado (estático).</p>
+        <ul>
+            <li><strong>Diagrama de Classes:</strong> O mais usado. Mostra as caixinhas e relações.</li>
+            <li><strong>Diagrama de Componentes:</strong> Mostra a parte física.</li>
+        </ul>
+
+        <h3>2. Diagramas Comportamentais</h3>
+        <p>Mostram como o sistema funciona (dinâmico).</p>
+        <ul>
+            <li><strong>Diagrama de Casos de Uso:</strong> O que o usuário faz.</li>
+            <li><strong>Diagrama de Sequência:</strong> Mostra a ordem das mensagens.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tabela de Símbolos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ator</td>
+                    <td>O bonequinho (usuário).</td>
+                </tr>
+                <tr>
+                    <td>Classe</td>
+                    <td>O retângulo com dados.</td>
+                </tr>
+                <tr>
+                    <td>Associação</td>
+                    <td>Linha que liga as coisas.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+</div>
+<section>
+    <h2>Desafio Rápido de UML</h2>
+    <form>
+        <h3>1) Qual diagrama é usado para representar a estrutura estática e as relações entre objetos?</h3>
+        <input type="radio" name="q1"> Diagrama de Atividades<br>
+        <input type="radio" name="q1"> Diagrama de Classes<br>
+        <input type="radio" name="q1"> Diagrama de Casos de Uso<br>
+        <input type="radio" name="q1"> Diagrama de Implantação<br><br>
+
+        <h3>2) Na UML, como chamamos o "bonequinho" que interage com o sistema?</h3>
+        <input type="radio" name="q2"> Usuário Padrão<br>
+        <input type="radio" name="q2"> Objeto Externo<br>
+        <input type="radio" name="q2"> Ator<br>
+        <input type="radio" name="q2"> Entidade Base<br><br>
+
+        <h3>3) Qual seta é utilizada para indicar "Generalização" (Herança)?</h3>
+        <input type="radio" name="q3"> Seta tracejada simples<br>
+        <input type="radio" name="q3"> Seta com ponta vazia e linha contínua<br>
+        <input type="radio" name="q3"> Seta com losango preenchido<br>
+        <input type="radio" name="q3"> Seta de mão única<br><br>
+        
+        <input type="submit" value="Enviar respostas">
+    </form>
+</section>
+
+</div>
+</div>
+
+</body>
+</html>
