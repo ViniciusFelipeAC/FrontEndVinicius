@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bichinho Virtual</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="bg-pink-50 min-h-screen flex flex-col">
+
+  <div class="w-full flex items-center justify-between p-4 gap-4">
+
+    <div class="flex items-center gap-3">
+      <div class="avatar">
+        <div class="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="imagem1.png" id="avatarImg" />
+        </div>
+      </div>
+      <input
+        type="text"
+        placeholder="Nome da criatura..."
+        class="input input-bordered input-sm"
+      />
+    </div>
+
+    <div class="flex items-center gap-2">
+      <span class="badge badge-outline" id="statusTexto">😊 Feliz</span>
+      <span class="text-sm">☀️</span>
+      <input type="checkbox" class="toggle toggle-sm" id="toggleNoite" onchange="alternarFundo()" />
+      <span class="text-sm">🌙</span>
+    </div>
+
+  </div>
+
+  <div class="flex flex-col items-center w-full px-4 flex-1">
+
+    <img
+      id="mainImage"
+      src="imagem1.png"
+      alt="Bichinho"
+      class="w-full max-w-xs h-auto mt-4"
+    />
+
+    <div class="w-full max-w-xs mt-4">
+      <p class="text-sm mb-1">🍽️ Fome: <span id="fomePct">100%</span></p>
+      <progress id="barraFome" class="progress progress-success w-full" value="100" max="100"></progress>
+    </div>
+
+    <div class="mt-8 flex justify-center">
+      <img
+        id="btnImage"
+        src="btn.png"
+        alt="Comida"
+        class="w-28 h-auto cursor-pointer active:scale-95 transition"
+        onclick="alimentar()"
+      />
+    </div>
+
+    <p class="text-xs text-gray-400 mt-2">Clique na comida para alimentar!</p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
