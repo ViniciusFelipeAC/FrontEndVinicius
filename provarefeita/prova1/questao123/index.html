@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copa do Mundo 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background-color: #1a5c2a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    nav {
+      background-color: #145220;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 18px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 4px;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255,255,255,0.15);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    section {
+      background-color: #fff;
+      border-left: 5px solid #1a5c2a;
+      border-radius: 4px;
+      padding: 28px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      color: #1a5c2a;
+      margin-bottom: 14px;
+    }
+
+    section p {
+      line-height: 1.75;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a5c2a;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Copa do Mundo FIFA 2026</h1>
+    <p>A maior edição da história do futebol mundial</p>
+  </header>
+
+  <nav>
+    <a href="#organizacao">Organização e Sedes</a>
+    <a href="#formato">Novo Formato</a>
+    <a href="#expectativas">Expectativas e Impacto</a>
+  </nav>
+  
+
+  <main>
+
+    <section id="organizacao">
+      <h2>Organização e Sedes</h2>
+      <p>
+        A Copa do Mundo FIFA de 2026 será a primeira edição realizada em três países:
+        <strong>Estados Unidos</strong>, <strong>Canadá</strong> e <strong>México</strong>.
+        Essa será também a maior Copa da história em número de cidades-sede, com partidas
+        distribuídas por diversas regiões da América do Norte, ampliando o alcance global
+        do torneio.
+      </p>
+    </section>
+
+    <section id="formato">
+      <h2>Novo Formato</h2>
+      <p>
+        O torneio contará com <strong>48 seleções</strong>, em vez das tradicionais 32.
+        As equipes serão divididas em grupos, aumentando o número total de jogos e dando
+        mais oportunidades para países de diferentes continentes participarem. Essa mudança
+        foi promovida pela FIFA para tornar a competição mais <strong>inclusiva e competitiva</strong>.
+      </p>
+    </section>
+
+    <section id="expectativas">
+      <h2>Expectativas e Impacto</h2>
+      <p>
+        A edição de 2026 promete ser uma das mais assistidas da história, com grande
+        <strong>impacto econômico e cultural</strong> nos países-sede. Além disso, seleções
+        tradicionais e emergentes devem protagonizar jogos de alto nível, aumentando ainda
+        mais o interesse global pelo futebol e fortalecendo o esporte em novas regiões.
+      </p>
+    </section>
+
+  </main>
+
+  <button onclick="mostrarTabela()">Mostrar Tabela de Jogos</button>
+
+  <script src="script.js"></script>
+
+  <footer>
+    <p>Made by saeT</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Copa do Mundo 2026</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+ 
+    header {
+      background-color: #1a5c2a;
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+ 
+    nav {
+      background-color: #145220;
+      padding: 10px;
+      text-align: center;
+    }
+ 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+ 
+    nav a:hover {
+      text-decoration: underline;
+    }
+ 
+    main {
+      gap: 20px;
+      margin-top: 30px;
+    }
+ 
+    div {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      flex: 1;
+    }
+ 
+    h3 {
+      color: #1a5c2a;
+      margin-bottom: 10px;
+    }
+ 
+    h4 {
+      color: #555;
+      margin-bottom: 6px;
+    }
+ 
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+ 
+    details summary {
+      cursor: pointer;
+      color: #1a5c2a;
+      font-weight: bold;
+    }
+ 
+    .saiba-mais-content {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #444;
+      border-left: 3px solid #1a5c2a;
+      padding-left: 10px;
+    }
+ 
+    footer {
+      text-align: center;
+      padding: 16px;
+      background-color: #1a5c2a;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Copa do Mundo FIFA 2026</h1>
+    <p>A maior edição da história do futebol mundial</p>
+  </header>
+
+  <nav>
+    <a href="#grupoa">Grupo A</a>
+    <a href="#grupob">Grupo B</a>
+    <a href="#grupoc">Grupo C</a>
+  </nav>
+
+  <main id="main-grupos">
+
+    <div id="grupoa">
+      <h3>🅰️ Grupo A</h3>
+      <h4>Seleções</h4>
+      <ul>
+        <li>México</li>
+        <li>África do Sul</li>
+        <li>Coreia do Sul</li>
+        <li>República Tcheca</li>
+      </ul>
+      <details>
+        <summary>Saiba Mais</summary>
+        <div class="saiba-mais-content">
+          O jogo de abertura será México x África do Sul. Confrontos entre Coreia do Sul
+          e seleções europeias já ocorreram em várias Copas, com histórico equilibrado.
+        </div>
+      </details>
+    </div>
+
+    <div id="grupob">
+      <h3>🅱️ Grupo B</h3>
+      <h4>Seleções</h4>
+      <ul>
+        <li>Canadá</li>
+        <li>Suíça</li>
+        <li>Catar</li>
+        <li>Vaga Europeia (Bósnia)</li>
+      </ul>
+      <details>
+        <summary>Saiba Mais</summary>
+        <div class="saiba-mais-content">
+          O Canadá joga em casa, fator importante de desempenho. Catar e Suíça já se
+          enfrentaram recentemente em amistosos internacionais.
+        </div>
+      </details>
+    </div>
+
+    <div id="grupoc">
+      <h3>🅲 Grupo C</h3>
+      <h4>Seleções</h4>
+      <ul>
+        <li>Brasil</li>
+        <li>Marrocos</li>
+        <li>Haiti</li>
+        <li>Escócia</li>
+      </ul>
+      <details>
+        <summary>Saiba Mais</summary>
+        <div class="saiba-mais-content">
+          Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu
+          para a Escócia em Copas.
+        </div>
+      </details>
+    </div>
+
+  </main>
+
+  <button id="btn-proximo" onclick="alternarGrupos()">Próximo</button>
+
+  <footer>
+    <p>Made by saeT</p>
+  </footer>
+
+  <script>
+    var paginaAtual = 1;
+
+    var paginas = {
+      1: [
+        {
+          id: "grupoa",
+          titulo: "🅰️ Grupo A",
+          selecoes: ["México", "África do Sul", "Coreia do Sul", "República Tcheca"],
+          fatos: "O jogo de abertura será México x África do Sul. Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas, com histórico equilibrado."
+        },
+        {
+          id: "grupob",
+          titulo: "🅱️ Grupo B",
+          selecoes: ["Canadá", "Suíça", "Catar", "Vaga Europeia (Bósnia)"],
+          fatos: "O Canadá joga em casa, fator importante de desempenho. Catar e Suíça já se enfrentaram recentemente em amistosos internacionais."
+        },
+        {
+          id: "grupoc",
+          titulo: "🅲 Grupo C",
+          selecoes: ["Brasil", "Marrocos", "Haiti", "Escócia"],
+          fatos: "Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas."
+        }
+      ],
+      2: [
+        {
+          id: "grupod",
+          titulo: "🅳 Grupo D",
+          selecoes: ["Estados Unidos", "Paraguai", "Austrália", "Turquia"],
+          fatos: "Os EUA jogam em casa, vantagem histórica em Copas. Austrália enfrenta frequentemente seleções sul-americanas em torneios."
+        },
+        {
+          id: "grupoe",
+          titulo: "🅴 Grupo E",
+          selecoes: ["Alemanha", "Equador", "Costa do Marfim", "Curaçao"],
+          fatos: "Alemanha costuma dominar fases de grupos. Equador e Costa do Marfim têm estilos físicos semelhantes."
+        },
+        {
+          id: "grupof",
+          titulo: "🅵 Grupo F",
+          selecoes: ["Holanda", "Japão", "Tunísia", "Suécia"],
+          fatos: "Holanda e Japão têm histórico de jogos disputados em Copas. Tunísia e Suécia são seleções de forte organização tática."
+        }
+      ]
+    };
+
+    function alternarGrupos() {
+      paginaAtual = paginaAtual === 1 ? 2 : 1;
+
+      var main = document.getElementById("main-grupos");
+      var grupos = paginas[paginaAtual];
+      var btn = document.getElementById("btn-proximo");
+
+      main.innerHTML = "";
+
+      for (var i = 0; i < grupos.length; i++) {
+        var g = grupos[i];
+
+        var div = document.createElement("div");
+        div.id = g.id;
+
+        var h3 = document.createElement("h3");
+        h3.textContent = g.titulo;
+
+        var h4 = document.createElement("h4");
+        h4.textContent = "Seleções";
+
+        var ul = document.createElement("ul");
+        for (var j = 0; j < g.selecoes.length; j++) {
+          var li = document.createElement("li");
+          li.textContent = g.selecoes[j];
+          ul.appendChild(li);
+        }
+
+        var details = document.createElement("details");
+        var summary = document.createElement("summary");
+        summary.textContent = "Saiba Mais";
+
+        var conteudo = document.createElement("div");
+        conteudo.className = "saiba-mais-content";
+        conteudo.textContent = g.fatos;
+
+        details.appendChild(summary);
+        details.appendChild(conteudo);
+
+        div.appendChild(h3);
+        div.appendChild(h4);
+        div.appendChild(ul);
+        div.appendChild(details);
+
+        main.appendChild(div);
+      }
+
+      btn.textContent = paginaAtual === 1 ? "Próximo" : "Anterior";
+    }
+  </script>
+
+</body>
+</html>
