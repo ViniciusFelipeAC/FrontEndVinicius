@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto 30px auto;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 18px;
+}
+
+.card input,
+.card select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.card button {
+  padding: 8px 16px;
+  background-color: #4a90d9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card button:hover {
+  background-color: #357abd;
+}
+
+#resultado-cpf,
+#resultado-media,
+#resultado-banco,
+#resultado-orcamento,
+#resultado-cartao {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.valido { color: green; }
+.invalido { color: red; }
+.aprovado { color: #1a6fcf; }
+.exame { color: green; }
+.reprovado { color: red; }
+
+.temp-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.temp-row label {
+  width: 90px;
+  font-size: 14px;
+}
+
+.temp-row input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+ul li span {
+  flex: 1;
+}
+
+ul li.concluido span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.btn-concluir {
+  background-color: #5cb85c;
+  padding: 5px 8px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.btn-editar {
+  background-color: #f0ad4e;
+  padding: 5px 8px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.btn-excluir {
+  background-color: #d9534f;
+  padding: 5px 8px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.btn-concluir:hover { background-color: #449d44; }
+.btn-editar:hover   { background-color: #d58512; }
+.btn-excluir:hover  { background-color: #ac2925; }
+
+.add-row {
+  display: flex;
+  gap: 8px;
+}
+
+.add-row input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.add-row button {
+  white-space: nowrap;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios Infinity Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Exercícios Infinity Bank</h1>
+
+  <div class="card">
+    <h2>⚡ Exercício 01 – Validador de CPF</h2>
+    <input type="text" id="cpf" placeholder="Digite o CPF (somente números)" maxlength="11">
+    <button onclick="validarCPF()">Validar</button>
+    <div id="resultado-cpf"></div>
+  </div>
+
+  <div class="card">
+    <h2>🌡️ Exercício 02 – Conversor de Temperatura</h2>
+    <div class="temp-row">
+      <label>Celsius (°C)</label>
+      <input type="number" id="celsius" step="0.1" oninput="converterParaF()">
+    </div>
+    <div class="temp-row">
+      <label>Fahrenheit (°F)</label>
+      <input type="number" id="fahrenheit" step="0.1" oninput="converterParaC()">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎓 Exercício 03 – Média Escolar</h2>
+    <input type="text" id="nomeAluno" placeholder="Nome do aluno">
+    <input type="number" id="nota1" placeholder="Nota 1" step="0.1">
+    <input type="number" id="nota2" placeholder="Nota 2" step="0.1">
+    <input type="number" id="nota3" placeholder="Nota 3" step="0.1">
+    <button onclick="calcularMedia()">Calcular</button>
+    <div id="resultado-media"></div>
+  </div>
+
+  <div class="card">
+    <h2>💳 Exercício 04 – Taxas Infinity Bank</h2>
+    <select id="bandeira">
+      <option value="visa">Visa (2%)</option>
+      <option value="master">Master (1.85%)</option>
+      <option value="elo">Elo (3%)</option>
+    </select>
+    <input type="number" id="valorVenda" placeholder="Valor da venda (R$)" step="0.01">
+    <input type="number" id="parcelas" placeholder="Número de parcelas" min="1">
+    <button onclick="calcularTaxa()">Calcular</button>
+    <div id="resultado-banco"></div>
+  </div>
+
+  <div class="card">
+    <h2>👥 Exercício 05 – Lista de Convidados VIP</h2>
+    <div class="add-row">
+      <input type="text" id="nomeConvidado" placeholder="Nome do convidado">
+      <button onclick="adicionarConvidado()">Adicionar</button>
+    </div>
+    <ul id="listaConvidados"></ul>
+  </div>
+
+  <div class="card">
+    <h2>🎉 Exercício 06 – Crédito para Festas & Eventos</h2>
+    <select id="pacote">
+      <option value="50">Standard – R$ 50,00/pessoa</option>
+      <option value="80">Premium – R$ 80,00/pessoa</option>
+      <option value="120">Infinity Deluxe – R$ 120,00/pessoa</option>
+    </select>
+    <input type="number" id="quantPessoas" placeholder="Quantidade de pessoas" min="1">
+    <button onclick="calcularOrcamento()">Calcular Orçamento</button>
+    <div id="resultado-orcamento"></div>
+  </div>
+
+  <div class="card">
+    <h2>🛡️ Exercício 07 – Validador de Segurança Infinity</h2>
+    <input type="text" id="numCartao" placeholder="Número do cartão (até 16 dígitos)" maxlength="19">
+    <button onclick="analisarCartao()">Analisar Cartão</button>
+    <div id="resultado-cartao"></div>
+  </div>
+
+  <script src="exercicios.js"></script>
+</body>
+</html>
