@@ -1,0 +1,243 @@
+/* ── Reset e base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #121213;
+  color: #ffffff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+/* ── Cabeçalho ── */
+header {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding: 18px 0 12px;
+  border-bottom: 1px solid #3a3a3c;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #ffffff;
+}
+
+.subtitulo {
+  font-size: 0.78rem;
+  color: #818384;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* ── Grade do tabuleiro ── */
+#board {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+/* Cada linha da grade */
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 62px);
+  gap: 5px;
+}
+
+/* Cada célula (letra) */
+.tile {
+  width: 62px;
+  height: 62px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  transition: border-color 0.1s;
+  user-select: none;
+}
+
+/* Tile com letra digitada (ainda não enviada) */
+.tile.filled {
+  border-color: #565758;
+  animation: pop 0.1s ease;
+}
+
+/* Animação de "pop" ao digitar */
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* Animação de virada ao revelar resultado */
+.tile.flip {
+  animation: flip 0.5s ease forwards;
+}
+
+@keyframes flip {
+  0%   { transform: rotateX(0deg); }
+  50%  { transform: rotateX(-90deg); background: transparent; }
+  100% { transform: rotateX(0deg); }
+}
+
+/* ── Estados das células após envio ── */
+
+/* Letra na posição correta → verde */
+.tile.correct {
+  background: #538d4e;
+  border-color: #538d4e;
+}
+
+/* Letra existe mas posição errada → amarelo */
+.tile.present {
+  background: #b59f3b;
+  border-color: #b59f3b;
+}
+
+/* Letra não existe na palavra → cinza escuro */
+.tile.absent {
+  background: #3a3a3c;
+  border-color: #3a3a3c;
+}
+
+/* ── Animação de shake (palavra inválida) ── */
+.row.shake {
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+/* ── Animação de bounce (linha vencedora) ── */
+.tile.bounce {
+  animation: bounce 0.6s ease forwards;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-20px); }
+  60%  { transform: translateY(-10px); }
+  80%  { transform: translateY(-16px); }
+  100% { transform: translateY(0); }
+}
+
+/* ── Mensagem de status ── */
+#message {
+  min-height: 36px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #ffffff;
+  background: #3a3a3c;
+  padding: 8px 20px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-bottom: 20px;
+}
+
+#message.visible {
+  opacity: 1;
+}
+
+/* ── Teclado virtual ── */
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 8px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+/* Tecla padrão */
+.key {
+  height: 58px;
+  min-width: 43px;
+  padding: 0 6px;
+  background: #818384;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Teclas ENTER e APAGAR são maiores */
+.key.wide {
+  min-width: 65px;
+  font-size: 0.75rem;
+}
+
+.key:hover {
+  filter: brightness(1.15);
+}
+
+/* Estados do teclado (mesmos estados das células) */
+.key.correct {
+  background: #538d4e;
+}
+
+.key.present {
+  background: #b59f3b;
+}
+
+.key.absent {
+  background: #3a3a3c;
+}
+
+/* ── Botão de novo jogo ── */
+#btn-novo-jogo {
+  margin-top: 20px;
+  padding: 12px 32px;
+  background: #538d4e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: none;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+#btn-novo-jogo:hover {
+  background: #6aaf64;
+}
